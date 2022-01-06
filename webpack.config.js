@@ -50,18 +50,6 @@ module.exports = {
         runtimeChunk: "single",
         sideEffects: true,
     },
-    plugins: [new htmlWebpackPlugin({ template: './index.html' }),],
-    devtool: 'inline-source-map',
-    port: 1337,
-    devServer: {
-        proxy: {
-            '/api': 'http://localhost:3000',
-        },
-        contentBase: path.join(__dirname, 'dist'),
-        compress: true,
-        historyApiFallback: true,
-        hot: true,
-        https: false,
-        noInfo: true,
-    },
+    plugins: [new htmlWebpackPlugin({ template: './index.html' }),
+    new MiniCssExtractPlugin(),],
 }
