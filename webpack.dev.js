@@ -26,9 +26,6 @@ module.exports = {
             {
                 test: /.(png|jpe?g|svg)$/,
                 loader: 'file-loader',
-            }, {
-                test: /.(glsl)$/,
-                loader: 'raw-loader',
             }
         ]
     },
